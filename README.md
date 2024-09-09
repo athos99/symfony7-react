@@ -7,9 +7,12 @@ Symfony 7 ux react
 
     composer create-project symfony/skeleton:"7.1.*" htdocs
     cd htdocs
-    composer require webapp symfony/apache-pack symfony/orm-pack symfony/monolog-bundle 
-    composer require symfony/twig-pack symfony/webpack-encore-bundle
-    composer require symfony/maker-bundle symfony/profiler-pack --dev
+    composer require webapp 
+    composer require symfony/apache-pack  
+    composer require symfony/webpack-encore-bundle
+    npm install npm@latest -g
+    yarn install --force
+
 
 
 
