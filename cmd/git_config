@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+git config core.autocrlf false
+git config core.symlinks true
+git config http.sslVerify false
+
+
+git config --global core.autocrlf false
+git config --global core.symlinks true
+git config --global http.sslVerify false

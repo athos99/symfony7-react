@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+mkdir -p htdocs/data
+php cmd/create_db.php
+cd htdocs
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+cd ..

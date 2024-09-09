@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+cd htdocs
+yarn upgrade
+cd ..

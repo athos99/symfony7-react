@@ -5,9 +5,10 @@ Symfony 7 ux react
 ---Installation
 
 
-    composer create-project symfony/skeleton:"7.1.*" symfony7-react
-    composer require webapp symfony/apache-pack symfony/webpack-encore-bundle symfony/monolog-bundle symfony/orm-pack 
-    composer require symfony/twig-pack
+    composer create-project symfony/skeleton:"7.1.*" htdocs
+    cd htdocs
+    composer require webapp symfony/apache-pack symfony/orm-pack symfony/monolog-bundle 
+    composer require symfony/twig-pack symfony/webpack-encore-bundle
     composer require symfony/maker-bundle symfony/profiler-pack --dev
 
 

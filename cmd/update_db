@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+cd htdocs
+php bin/console doctrine:migrations:migrate
+cd ..

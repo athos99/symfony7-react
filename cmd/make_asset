@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+cd htdocs
+yarn encore dev
+cd ..

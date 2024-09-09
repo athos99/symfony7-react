@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+cd htdocs
+composer update  --optimize-autoloader
+npm install npm@latest -g
+yarn install --force
+yarn encore prod
+cd ..

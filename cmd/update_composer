@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+cd htdocs
+composer update  --optimize-autoloader
+cd ..
