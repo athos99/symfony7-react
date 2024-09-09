@@ -7,6 +7,7 @@ Symfony 7 ux react
 
     composer create-project symfony/skeleton:"7.1.*" htdocs
     cd htdocs
+    compser update
     composer require webapp 
     composer require symfony/apache-pack  
     composer remove symfony/ux-turbo symfony/asset-mapper symfony/stimulus-bundle
