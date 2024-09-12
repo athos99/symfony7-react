@@ -1,1 +1,4 @@
 /.idea
+/htdocs/vendor
+/htdocs/node_modules
+/htdocs/var
