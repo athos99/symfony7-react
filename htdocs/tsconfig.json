@@ -1,5 +1,15 @@
 {
-    "compilerOptions": {
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "module": "es6",
+    "target": "es2022",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  /*     "compilerOptions": {
       "noEmit": true,
       "lib": [
         "ES2022",
@@ -7,7 +17,6 @@
           "dom.iterable",
       ],
       "moduleResolution": "node",
-      "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
       "jsx": "react",
       "forceConsistentCasingInFileNames": true,
@@ -18,8 +27,11 @@
       "module": "ESNext",
       "skipLibCheck": true,
     },
-  "include": ["assets/**/*"],
+ */
+  "include": [
+    "assets/**/*"
+  ],
   "exclude": [
     "node_modules"
-]}
-  
+  ]
+}

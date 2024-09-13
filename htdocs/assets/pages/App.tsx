@@ -4,14 +4,17 @@ import Base from "./Base";
 import Home from "./Home";
 
 
-export default function App(param) {
+export default function App({basename}:{basename:string}) {
     return (
-        <BrowserRouter basename={param.basename}>
+        <>
+        <i>blalldldld</i>
+        <BrowserRouter basename={basename}>
             <Routes>
                 <Route path="/" element={<Base />}>
                     <Route index element={<Home />} />
                 </Route>
             </Routes>
         </BrowserRouter>
+        </>
     );
 }
