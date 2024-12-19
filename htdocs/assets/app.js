@@ -1,5 +1,5 @@
 import './bootstrap.js';
 import 'bootstrap';
 
-import './styles/app.css';
+import './styles/app.scss';
 import './react.tsx';
