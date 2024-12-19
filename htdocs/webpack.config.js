@@ -39,7 +39,7 @@ Encore
      * list of features, see:
      * https://symfony.com/doc/current/frontend.html#adding-more-features
      */
-//    .cleanupOutputBeforeBuild()
+    .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
@@ -75,10 +75,10 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
 
-    .cleanupOutputBeforeBuild(['**', '!build', '!build/**'], (options) => {
-        options.verbose = true;
-        options.exclude = ['build', 'build/**'];
-    })
+    // .cleanupOutputBeforeBuild(['**', '!build', '!build/**'], (options) => {
+    //     options.verbose = true;
+    //     options.exclude = ['build', 'build/**'];
+    // })
 
 ;
 
