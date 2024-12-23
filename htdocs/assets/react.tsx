@@ -8,4 +8,4 @@ import App from './pages/App';
 const myAppId = document.getElementById('myapp')!;
 const root = createRoot(myAppId);
 const basename = myAppId.dataset.path;
-root.render(<App basename={basename}/>);
+root.render(<App basename={basename!}/>);

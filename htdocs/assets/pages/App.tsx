@@ -1,8 +1,9 @@
-import React from "react";
 import {BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider} from "react-router-dom";
 import Base from "./Base";
 import Home from "./Home";
 import DragAndDropApp from "./DragAndDropApp";
+import DargCardApp from "./DragCard/DragCardApp";
+//import DragAndDropApp from "./DragAndDropApp";
 
 
 const routes = [
@@ -19,7 +20,12 @@ const routes = [
                 {
                     path: "/drag",
                     element: <DragAndDropApp/>
+                },
+                {
+                    path: "/dragcard",
+                    element: <DargCardApp/>
                 }
+
             ]
         }
     ]
