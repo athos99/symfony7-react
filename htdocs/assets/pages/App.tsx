@@ -1,6 +1,7 @@
 import {BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider} from "react-router-dom";
 import Base from "./Base";
 import Home from "./Home";
+import DragCardApp from "./DragCard/DragCardApp";
 
 
 
@@ -17,7 +18,7 @@ const routes = [
                 },
                 {
                     path: "/dragcard",
-                    element: <DargCardApp/>
+                    element: <DragCardApp/>
                 }
 
             ]
