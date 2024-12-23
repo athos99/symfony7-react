@@ -13,8 +13,7 @@ import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import Column, { ColumnType } from "./Column";
 import { useState } from "react";
 
-export default function DargCardApp() {
-  // 仮データを定義
+export default function DragCardApp() {
   const data: ColumnType[] = [
     {
       id: "Column1",
