@@ -1,4 +1,6 @@
-import {BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider} from "react-router-dom";
+import React from "react";
+
+import {BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider} from "react-router";
 import Base from "./Base";
 import Home from "./Home";
 import DragCardApp from "./DragCard/DragCardApp";
