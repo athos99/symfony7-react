@@ -1,7 +1,7 @@
 import React from "react";
 
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router";
-import {defer} from "react-router-dom";
+import {createBrowserRouter, Outlet,  RouterProvider} from "react-router";
+
 
 import Root from "./Root";
 import Home from "./Home";
@@ -10,11 +10,13 @@ import Article from "./Article";
 import PageError from "./PageError";
 import Blog from "./Blog";
 import Blog2 from "./Blog2";
+import MyForm,{MyFormAction} from "./MyForm";
 
 
 export const ROUTEURL = {
     root: '/',
     home: '/home',
+    myform: '/myform',
     blog: '/blog',
     blog2: '/blog2',
     dragcard: '/home/dragcard',
@@ -28,13 +30,18 @@ const routes = [
         {
             path: ROUTEURL.root,
             element: <Root/>,
-            errorElement: <PageError/>,
+
+ //           errorElement: <PageError/>,
             children: [
                 {
                     path: ROUTEURL.home,
                     element: <Home/>
                 },
-
+                {
+                    path: ROUTEURL.myform,
+                    element: <MyForm/>,
+                    action: MyFormAction
+                },
                 {
                     path: ROUTEURL.blog,
                     element: <div className={'row'}>
@@ -70,9 +77,9 @@ const routes = [
                         {
                             path: '',
                             element: <Blog2/>,
-                            loader: () => {
-                                const posts = fetch('https://jsonplaceholder.typicode.com/posts?_limit=10').then(r=>r.json())
-                                return defer({posts})
+                            loader: async () => {
+                                const posts = fetch('https://jsonplaceholder.typicode.com/posts?_limit=10').then(r=>r.json());
+                                return {posts};
                             }
                         },
                         {

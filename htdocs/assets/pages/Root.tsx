@@ -10,6 +10,7 @@ export default function Root() {
             <div className={'row'}>
                 <nav className={'col-12'}>
                     <NavLink className={'btn btn-primary m-1'} to={ROUTEURL.home}>Home</NavLink>
+                    <NavLink className={'btn btn-primary m-1'} to={ROUTEURL.myform}>My form</NavLink>
                     <NavLink className={'btn btn-primary m-1'} to={ROUTEURL.dragcard}>Drag card</NavLink>
                     <NavLink className={'btn btn-primary m-1'} to={ROUTEURL.blog}>Mon blog</NavLink>
                     <NavLink className={'btn btn-primary m-1'} to={ROUTEURL.blog2}>Mon blog 2</NavLink>
