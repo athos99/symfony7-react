@@ -12,11 +12,9 @@ export async function MyFormAction({request, params, context}: ActionFunctionArg
 
     const updates = Object.fromEntries(formData);
     console.log(updates);
-    return <div>ok</div>;
 }
 
-export default function MyForm(x) {
-    console.log(x);
+export default function MyForm() {
     return (
 
         <Form method="post">

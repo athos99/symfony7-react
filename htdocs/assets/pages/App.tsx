@@ -11,12 +11,14 @@ import PageError from "./PageError";
 import Blog from "./Blog";
 import Blog2 from "./Blog2";
 import MyForm,{MyFormAction} from "./MyForm";
+import MyFormValidation, {MyFormAValidationAction} from "./MyFormValidation";
 
 
 export const ROUTEURL = {
     root: '/',
     home: '/home',
     myform: '/myform',
+    myformvalidation: '/myformvalidation',
     blog: '/blog',
     blog2: '/blog2',
     dragcard: '/home/dragcard',
@@ -41,6 +43,11 @@ const routes = [
                     path: ROUTEURL.myform,
                     element: <MyForm/>,
                     action: MyFormAction
+                },
+                {
+                    path: ROUTEURL.myformvalidation,
+                    element: <MyFormValidation/>,
+                    action: MyFormAValidationAction
                 },
                 {
                     path: ROUTEURL.blog,
