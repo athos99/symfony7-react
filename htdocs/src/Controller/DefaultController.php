@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-    #[Route('/{sub}', name: 'homepage', requirements: ['sub'=>'.*'])]
+    #[Route('/{sub}', name: 'homepage', requirements: ['sub'=>'.*'], priority:-1 )]
     public function index($sub=null)
     {
         return $this->render('homepage.html.twig');

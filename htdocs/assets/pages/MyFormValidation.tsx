@@ -7,7 +7,7 @@ export async function MyFormAValidationAction({request}: ActionFunctionArgs) {
     const email = String(formData.get("email"));
     const password = String(formData.get("password"));
 
-    const errors = {};
+    const errors : {email?:string, password?:string} = {} ;
 
     if (!email.includes("@")) {
         errors.email = "Invalid email address";

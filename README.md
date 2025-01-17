@@ -11,7 +11,7 @@ Symfony 7 ux react
     composer require webapp 
     composer require symfony/apache-pack  
     composer remove symfony/ux-turbo symfony/asset-mapper symfony/stimulus-bundle
-    composer require symfony/webpack-encore-bundle symfony/ux-turbo symfony/stimulus-bundle
+    composer require symfony/webpack-encore-bundle 
     npm install npm@latest -g
     yarn install --force
 

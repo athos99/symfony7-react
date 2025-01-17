@@ -1,11 +1,11 @@
 import {Await, NavLink, useAsyncValue, useLoaderData, useParams} from "react-router";
 import {ROUTEURL} from "./App";
 import {ReactNode, Suspense} from "react";
-import Spinner from "./DragCard/Spinner";
+import Spinner from "./Spinner";
 
 
 function PostsList() {
-    const posts = useAsyncValue()
+    const posts = useAsyncValue() as {id:string,title:string}[]
     return <>
         <ul>
             {posts.map((post) => (

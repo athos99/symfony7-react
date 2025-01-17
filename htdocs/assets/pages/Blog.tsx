@@ -2,7 +2,7 @@ import {NavLink, useLoaderData, useParams} from "react-router";
 import {ROUTEURL} from "./App";
 
 export default function Blog() {
-    const posts  = useLoaderData()
+    const posts  = useLoaderData() as {id:string,title:string}[]
     return <div><h2>Mon blog</h2>
         <ul>
             {posts.map((post)=>(

@@ -12,6 +12,7 @@ import Blog from "./Blog";
 import Blog2 from "./Blog2";
 import MyForm,{MyFormAction} from "./MyForm";
 import MyFormValidation, {MyFormAValidationAction} from "./MyFormValidation";
+import Fetch from "./Fetch";
 
 
 export const ROUTEURL = {
@@ -21,6 +22,7 @@ export const ROUTEURL = {
     myformvalidation: '/myformvalidation',
     blog: '/blog',
     blog2: '/blog2',
+    fetch: 'fetch',
     dragcard: '/home/dragcard',
     articleDef: '/blog/article/:id',
     article: '/blog/article/'
@@ -94,6 +96,10 @@ const routes = [
                             element: <Article/>
                         }
                     ]
+                },
+                {
+                    path: ROUTEURL.fetch,
+                    element: <Fetch/>,
                 },
                 {
                     path: ROUTEURL.dragcard,
