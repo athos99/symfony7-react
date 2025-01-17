@@ -1,8 +1,9 @@
 import useFetch  from "./useFetch";
-import {getParam, setParam} from "../Param";
+import {getParam} from "../Param";
 import useSimulFetch from "./useSimulFetch";
 import Spinner from "./Spinner";
-import waitFetch from "./WaitFetch";
+import WaitFetch from "./WaitFetch";
+import { v4 as uuidv4 } from 'uuid';
 
 const city = [
     {
@@ -36,11 +37,12 @@ function ListPerson() {
     const basename = getParam('basename');
 
     const data = useFetch(basename + 'api/list') as Person[] | null;
-    return <ul>
+    const key=uuidv4();
+    return <ul key={key}>
         {!data && <Spinner/>}
         {data && data.map(element => {
         return (<>{element &&
-            (<li key={'a'+element.id}>{element.id} {element.name}</li>)}</>)
+            (<li key={key+element.id}>{element.id} {element.name}</li>)}</>)
     })}</ul>
 
 }
@@ -49,12 +51,13 @@ function ListPerson() {
 async function WaitListPerson() {
     const basename = getParam('basename');
 
-    const data = await waitFetch(basename + 'api/list') as Person[] | null;
-    return <ul>
+    const data = await WaitFetch(basename + 'api/list') as Person[] | null;
+    const key=uuidv4();
+    return <ul key={key}>
         {!data && <Spinner/>}
         {data && data.map(element => {
             return (<>{element &&
-                (<li key={'b'+element.id}>{element.id} {element.name}</li>)}</>)
+                (<li key={key+element.id}>{element.id} {element.name}</li>)}</>)
         })}</ul>
 
 }
@@ -63,11 +66,12 @@ async function WaitListPerson() {
 function ListCity() {
 
     const data = useSimulFetch(city, 2000) as { id: number, name: string }[] | null;
-    return <ul>
+    const key=uuidv4();
+    return <ul key={key}>
         {!data && <Spinner/>}
         {data && data.map(element => {
         return (<>{element &&
-            (<li key={'c'+element.id}>{element.id} {element.name}</li>)}</>)
+            (<li key={key+element.id}>{element.id} {element.name}</li>)}</>)
     })}</ul>
 
 }
@@ -81,11 +85,12 @@ export default function Fetch() {
             <ListPerson/>
         </div>
         <div className='col-6'>
-            <h4>Wait Person</h4>
+            <h4>Person</h4>
+            <ListPerson/>
         </div>
         <div className='col-6'>
             <h4>City</h4>
-            <ListCity/>
+            <ListPerson/>
         </div>
     </div></>
 }

@@ -4,7 +4,7 @@ import {ROUTEURL} from "./App";
 import Spinner from "./Spinner";
 
 export default function Root() {
-//    const {state} = useNavigation();
+   const {state} = useNavigation();
     return (
         <div className={'container'}>
             <div className={'row'}>
@@ -21,9 +21,9 @@ export default function Root() {
                     <Link className={'btn btn-primary m-1'} to={ROUTEURL.fetch}>Fetch</Link>
                     <a href={ROUTEURL.fetch}>test</a>
                 </nav>
-                {/*<div className={'col-12'}>*/}
-                {/*    {state === 'loading' && <Spinner/>}*/}
-                {/*</div>*/}
+                <div className={'col-12'}>
+                    {state === 'loading' && <Spinner/>}
+                </div>
 
             </div>
             <Outlet/>
